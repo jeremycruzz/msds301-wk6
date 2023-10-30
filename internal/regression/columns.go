@@ -2,7 +2,7 @@ package regression
 
 var (
 	// Removed rooms and age
-	ColumnsA = []string{"neighborhood", "crim", "zn", "indus", "chas", "nox", "dis", "rad", "tax", "ptratio", "lstat", "mv"}
+	OmitA = map[string]bool{"rooms": true, "age": true}
 	// Removed tax and crim
-	ColumnsB = []string{"neighborhood", "zn", "indus", "chas", "nox", "rooms", "age", "dis", "rad", "ptratio", "lstat", "mv"}
+	OmitB = map[string]bool{"tax": true, "crim": true}
 )

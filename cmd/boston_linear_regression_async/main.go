@@ -23,11 +23,11 @@ func main() {
 		start := time.Now()
 
 		go func() {
-			modelA := regression.New(regression.ColumnsA)
+			modelA := regression.New(regression.OmitA)
 			mseChanA <- modelA.TrainAndPredict()
 		}()
 		go func() {
-			modelB := regression.New(regression.ColumnsB)
+			modelB := regression.New(regression.OmitB)
 			mseChanB <- modelB.TrainAndPredict()
 		}()
 

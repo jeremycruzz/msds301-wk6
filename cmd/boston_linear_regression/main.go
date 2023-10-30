@@ -20,10 +20,10 @@ func main() {
 	for i := 0; i < NUM_RUNS; i++ {
 		start := time.Now()
 
-		modelA := regression.New(regression.ColumnsA)
+		modelA := regression.New(regression.OmitA)
 		mseA := modelA.TrainAndPredict()
 
-		modelB := regression.New(regression.ColumnsB)
+		modelB := regression.New(regression.OmitB)
 		mseB := modelB.TrainAndPredict()
 
 		endTime := time.Since(start).Nanoseconds()
